@@ -1,6 +1,6 @@
 {
-  "name": "ChatDevAI - Pro-Code AI Agents",
-  "short_name": "ChatDevAI",
+  "name": "AgentDevAI - Pro-Code AI Agents",
+  "short_name": "AgentDevAI",
   "description": "Build custom AI agents with LangChain, LangGraph, and FastAPI for WhatsApp and multi-channel automation",
   "start_url": "/",
   "display": "standalone",

@@ -5,7 +5,7 @@ export function ServiceSchema() {
     serviceType: "AI Agent Development",
     provider: {
       "@type": "Organization",
-      name: "ChatDevAI",
+      name: "AgentDevAI",
       url: "https://chatdevai.com",
     },
     description:

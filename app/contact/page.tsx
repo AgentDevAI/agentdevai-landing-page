@@ -7,17 +7,17 @@ import { ContactFAQ } from "@/components/contact/contact-faq"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Contact ChatDevAI | Get Your Custom AI Bot",
+  title: "Contact AgentDevAI | Get Your Custom AI Bot",
   description:
     "Contact our team to build your custom WhatsApp AI agent. Fast response, free consultation available. Schedule a call today.",
   openGraph: {
-    title: "Contact ChatDevAI | Get Your Custom AI Bot",
+    title: "Contact AgentDevAI | Get Your Custom AI Bot",
     description: "Get in touch with our AI engineering team. Free consultation for WhatsApp automation projects.",
     type: "website",
   },
   twitter: {
     card: "summary",
-    title: "Contact ChatDevAI",
+    title: "Contact AgentDevAI",
     description: "Contact our team to build your custom WhatsApp AI agent.",
   },
 }

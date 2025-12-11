@@ -1,4 +1,4 @@
-// Server Component - Why choose ChatDevAI section with comparison
+// Server Component - Why choose AgentDevAI section with comparison
 import { Check } from "lucide-react"
 import { Card } from "@/components/ui/card"
 
@@ -10,7 +10,7 @@ const advantages = [
   "High performance & reliability",
 ]
 
-export default function WhyChatDevAI() {
+export default function WhyAgentDevAI() {
   return (
     <section className="relative py-24 px-4 bg-slate-950">
       <div className="max-w-6xl mx-auto">
@@ -46,7 +46,7 @@ export default function WhyChatDevAI() {
 
         <div className="mt-16 pt-16 border-t border-slate-800">
           <p className="text-center text-slate-400 text-sm uppercase tracking-wider mb-8">
-            ChatDevAI vs No-Code Alternatives
+            AgentDevAI vs No-Code Alternatives
           </p>
           <div className="grid md:grid-cols-2 gap-8">
             <Card className="p-8 bg-slate-900/50 border-slate-800">
@@ -60,7 +60,7 @@ export default function WhyChatDevAI() {
               </ul>
             </Card>
             <Card className="p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border-blue-500/50">
-              <h3 className="text-xl font-bold text-white mb-4">ChatDevAI Pro-Code</h3>
+              <h3 className="text-xl font-bold text-white mb-4">AgentDevAI Pro-Code</h3>
               <ul className="space-y-3 text-white">
                 <li>✓ Unlimited customization</li>
                 <li>✓ Enterprise scalability</li>

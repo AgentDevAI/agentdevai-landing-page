@@ -32,13 +32,13 @@ const FEATURES = [
   },
 ]
 
-export function WhyChatDevAI() {
+export function WhyAgentDevAI() {
   return (
     <section className="relative py-24 px-4 bg-gradient-to-b from-slate-950 to-slate-900">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Why <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">ChatDevAI</span>
+            Why <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">AgentDevAI</span>
             ?
           </h2>
           <p className="text-xl text-slate-400 max-w-3xl mx-auto">

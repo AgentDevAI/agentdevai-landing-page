@@ -28,7 +28,7 @@ export default function WhyChoose() {
   return (
     <section className="relative py-24 px-4 bg-slate-950">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 text-center">Why Businesses Choose ChatDevAI</h2>
+        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 text-center">Why Businesses Choose AgentDevAI</h2>
         <p className="text-center text-slate-300 mb-16 max-w-2xl mx-auto">
           We're not just another AI vendor. We're your engineering partner.
         </p>

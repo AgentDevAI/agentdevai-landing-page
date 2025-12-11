@@ -1,7 +1,7 @@
 import { Navbar } from "@/components/navbar"
 import { Hero } from "@/components/home/hero"
 import { LiveDemos } from "@/components/home/live-demos"
-import { WhyChatDevAI } from "@/components/home/why-chatdevai"
+import { WhyAgentDevAI } from "@/components/home/why-chatdevai"
 import { ProcessSection } from "@/components/home/process-section"
 import { TechStack } from "@/components/home/tech-stack"
 import { TestimonialsSection } from "@/components/home/testimonials-section"
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     "chatbot development",
   ],
   openGraph: {
-    title: "WhatsApp AI Agents & Multi-Channel Automation | ChatDevAI",
+    title: "WhatsApp AI Agents & Multi-Channel Automation | AgentDevAI",
     description:
       "Build custom AI agents for WhatsApp with LangChain, LangGraph, and FastAPI. Professional automation solutions.",
     type: "website",
@@ -42,7 +42,7 @@ export default function Home() {
         <Navbar />
         <Hero />
         <LiveDemos />
-        <WhyChatDevAI />
+        <WhyAgentDevAI />
         <ProcessSection />
         <TechStack />
         <TestimonialsSection />

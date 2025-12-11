@@ -19,7 +19,7 @@ export default function Benefits() {
   return (
     <section className="relative py-24 px-4 bg-slate-950">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-white">Why Choose ChatDevAI?</h2>
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-white">Why Choose AgentDevAI?</h2>
 
         <p className="text-center text-slate-400 mb-12 max-w-2xl mx-auto">
           We don't build one-size-fits-all solutions. We engineer systems that integrate your stack, scale without

@@ -2,7 +2,7 @@ export function OrganizationSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "ChatDevAI",
+    name: "AgentDevAI",
     description:
       "Professional AI agent development with LangChain, LangGraph, and FastAPI. Build scalable WhatsApp automation and multi-channel integration.",
     url: "https://chatdevai.com",

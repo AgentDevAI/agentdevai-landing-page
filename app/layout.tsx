@@ -11,8 +11,8 @@ const _geistMono = Geist_Mono({ subsets: ["latin"], display: "swap", preload: fa
 export const metadata: Metadata = {
   metadataBase: new URL("https://chatdevai.com"),
   title: {
-    default: "ChatDevAI - Pro-Code AI Agents for WhatsApp & Multi-Channel Automation",
-    template: "%s | ChatDevAI",
+    default: "AgentDevAI - Pro-Code AI Agents for WhatsApp & Multi-Channel Automation",
+    template: "%s | AgentDevAI",
   },
   description:
     "Build custom AI agents with LangChain, LangGraph, and FastAPI. WhatsApp automation, multi-channel integration, and scalable pro-code solutions that outperform no-code platforms.",
@@ -29,9 +29,9 @@ export const metadata: Metadata = {
     "Firebase",
     "pro code",
   ],
-  authors: [{ name: "ChatDevAI" }],
-  creator: "ChatDevAI",
-  publisher: "ChatDevAI",
+  authors: [{ name: "AgentDevAI" }],
+  creator: "AgentDevAI",
+  publisher: "AgentDevAI",
   formatDetection: {
     email: false,
     address: false,
@@ -41,8 +41,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://chatdevai.com",
-    siteName: "ChatDevAI",
-    title: "ChatDevAI - Pro-Code AI Agents for WhatsApp & Multi-Channel Automation",
+    siteName: "AgentDevAI",
+    title: "AgentDevAI - Pro-Code AI Agents for WhatsApp & Multi-Channel Automation",
     description:
       "Build custom AI agents with LangChain, LangGraph, and FastAPI. Professional WhatsApp automation and multi-channel integration.",
     images: [
@@ -50,13 +50,13 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "ChatDevAI - AI Agent Development",
+        alt: "AgentDevAI - AI Agent Development",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "ChatDevAI - Pro-Code AI Agents",
+    title: "AgentDevAI - Pro-Code AI Agents",
     description: "Custom AI agents for WhatsApp automation with LangChain, LangGraph, and FastAPI",
     images: ["/og-image.jpg"],
   },

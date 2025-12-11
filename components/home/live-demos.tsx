@@ -4,28 +4,28 @@ import { ShoppingCart, Calendar, Target, FileQuestion } from "lucide-react"
 const DEMOS = [
   {
     icon: ShoppingCart,
-    title: "WhatsApp E-commerce Bot",
+    title: "E-commerce Bot",
     description:
       "Browse products, add to cart, and checkout directly through WhatsApp. Includes order tracking and customer support.",
     color: "from-blue-500 to-cyan-500",
   },
   {
     icon: Calendar,
-    title: "WhatsApp Booking Bot",
+    title: "Booking Bot",
     description:
       "Schedule appointments, check availability, and receive reminders automatically. Perfect for salons, clinics, and services.",
     color: "from-purple-500 to-pink-500",
   },
   {
     icon: Target,
-    title: "WhatsApp Lead Qualification Bot",
+    title: "Lead Qualification Bot",
     description:
       "Qualify leads automatically with intelligent questions, score prospects, and route to the right sales rep instantly.",
     color: "from-orange-500 to-red-500",
   },
   {
     icon: FileQuestion,
-    title: "WhatsApp FAQ + RAG Bot",
+    title: "FAQ + RAG Bot",
     description:
       "Answer customer questions using your knowledge base with RAG. Reduces support load by 70% on average.",
     color: "from-green-500 to-emerald-500",

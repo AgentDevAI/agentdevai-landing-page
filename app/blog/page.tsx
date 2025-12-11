@@ -6,12 +6,12 @@ import { BlogNewsletter } from "@/components/blog/blog-newsletter"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Blog | ChatDevAI - AI Agents, Automation & Best Practices",
+  title: "Blog | AgentDevAI - AI Agents, Automation & Best Practices",
   description:
-    "Learn about AI agents, multi-agent systems, WhatsApp automation, and business automation best practices. Expert insights from ChatDevAI engineers.",
+    "Learn about AI agents, multi-agent systems, WhatsApp automation, and business automation best practices. Expert insights from AgentDevAI engineers.",
   keywords: ["AI blog", "automation tutorials", "LangChain guides", "WhatsApp automation", "AI best practices"],
   openGraph: {
-    title: "Blog | ChatDevAI - AI Agents & Automation Insights",
+    title: "Blog | AgentDevAI - AI Agents & Automation Insights",
     description: "Expert tutorials, guides, and insights on AI agents, automation, and enterprise AI development.",
     type: "website",
     images: [
@@ -19,13 +19,13 @@ export const metadata: Metadata = {
         url: "/og-blog.jpg",
         width: 1200,
         height: 630,
-        alt: "ChatDevAI Blog",
+        alt: "AgentDevAI Blog",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "ChatDevAI Blog - AI Agents & Automation",
+    title: "AgentDevAI Blog - AI Agents & Automation",
     description: "Expert tutorials and insights on AI agents, LangChain, and business automation.",
     images: ["/og-blog.jpg"],
   },
