@@ -354,7 +354,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ id: s
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: post.title,
-    image: `https://chatdevai.com${post.image}`,
+    image: `https://agentdevai.com${post.image}`,
     datePublished: new Date(post.date).toISOString(),
     author: {
       "@type": "Person",
@@ -365,7 +365,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ id: s
       name: "ChatDevAI",
       logo: {
         "@type": "ImageObject",
-        url: "https://chatdevai.com/chatdevai-logo.png",
+        url: "https://agentdevai.com/chatdevai-logo.png",
       },
     },
     description: `${post.title}. ${post.readTime} by ${post.author}.`,
