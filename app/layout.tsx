@@ -9,7 +9,7 @@ const _geist = Geist({ subsets: ["latin"], display: "swap", preload: true })
 const _geistMono = Geist_Mono({ subsets: ["latin"], display: "swap", preload: false })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://chatdevai.com"),
+  metadataBase: new URL("https://agentdevai.com"),
   title: {
     default: "AgentDevAI - Pro-Code AI Agents for WhatsApp & Multi-Channel Automation",
     template: "%s | AgentDevAI",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://chatdevai.com",
+    url: "https://agentdevai.com",
     siteName: "AgentDevAI",
     title: "AgentDevAI - Pro-Code AI Agents for WhatsApp & Multi-Channel Automation",
     description:
