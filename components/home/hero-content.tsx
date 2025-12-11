@@ -24,7 +24,7 @@ export function HeroContent() {
       </h1>
 
       <p className="text-xl md:text-2xl text-slate-300 text-pretty max-w-2xl mx-auto lg:mx-0">
-        ChatDevAI builds production-grade AI systems using FastAPI, LangChain, LangGraph, and GCP.
+        AgentDevAI builds production-grade AI systems using FastAPI, LangChain, LangGraph, and GCP.
       </p>
 
       <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">

@@ -7,7 +7,7 @@ export function CaseStudiesHero() {
           <span className="bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">Real Impact</span>
         </h1>
         <p className="text-xl text-slate-300">
-          Discover how leading companies are transforming their operations with ChatDevAI's intelligent AI agents.
+          Discover how leading companies are transforming their operations with AgentDevAI's intelligent AI agents.
         </p>
       </div>
     </section>

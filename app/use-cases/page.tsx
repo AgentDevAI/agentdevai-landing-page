@@ -5,9 +5,9 @@ import { UseCasesHero } from "@/components/use-cases/use-cases-hero"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Use Cases | ChatDevAI - WhatsApp AI Automation Solutions",
+  title: "Use Cases | AgentDevAI - WhatsApp AI Automation Solutions",
   description:
-    "Discover how ChatDevAI's WhatsApp AI agents automate e-commerce, appointments, lead generation, customer service, and more. See real-world applications.",
+    "Discover how AgentDevAI's WhatsApp AI agents automate e-commerce, appointments, lead generation, customer service, and more. See real-world applications.",
   keywords: [
     "WhatsApp automation",
     "customer service automation",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "lead qualification automation",
   ],
   openGraph: {
-    title: "Use Cases | ChatDevAI - WhatsApp AI Automation Solutions",
+    title: "Use Cases | AgentDevAI - WhatsApp AI Automation Solutions",
     description: "Real-world applications of AI agents for business automation across industries.",
     type: "website",
   },

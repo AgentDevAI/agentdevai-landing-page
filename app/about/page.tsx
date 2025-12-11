@@ -8,12 +8,12 @@ import { AboutPartners } from "@/components/about/about-partners"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "About ChatDevAI - Agentic AI Engineering",
+  title: "About AgentDevAI - Agentic AI Engineering",
   description:
-    "Meet the team behind ChatDevAI. We're agentic AI engineers and FastAPI/LangChain specialists building the future of business automation with pro-code solutions.",
-  keywords: ["AI engineering", "LangChain experts", "FastAPI specialists", "AI team", "about ChatDevAI"],
+    "Meet the team behind AgentDevAI. We're agentic AI engineers and FastAPI/LangChain specialists building the future of business automation with pro-code solutions.",
+  keywords: ["AI engineering", "LangChain experts", "FastAPI specialists", "AI team", "about AgentDevAI"],
   openGraph: {
-    title: "About ChatDevAI - Agentic AI Engineering Team",
+    title: "About AgentDevAI - Agentic AI Engineering Team",
     description: "Pro-code AI engineers specializing in LangChain, FastAPI, and enterprise AI agent development.",
     type: "website",
     images: [
@@ -21,13 +21,13 @@ export const metadata: Metadata = {
         url: "/og-about.jpg",
         width: 1200,
         height: 630,
-        alt: "ChatDevAI Team",
+        alt: "AgentDevAI Team",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "About ChatDevAI - Agentic AI Engineering",
+    title: "About AgentDevAI - Agentic AI Engineering",
     description: "Meet the team building the future of business automation with pro-code AI solutions.",
     images: ["/og-about.jpg"],
   },

@@ -6,7 +6,7 @@ export function FooterBrand() {
         <div className="w-8 h-8 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-lg flex items-center justify-center">
           <span className="text-white font-bold text-sm">AI</span>
         </div>
-        <span className="text-white font-bold">ChatDevAI</span>
+        <span className="text-white font-bold">AgentDevAI</span>
       </div>
       <p className="text-slate-400 text-sm">Intelligent AI agents for your business.</p>
     </div>

@@ -285,12 +285,12 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 
   if (!post) {
     return {
-      title: "Post Not Found - ChatDevAI Blog",
+      title: "Post Not Found - AgentDevAI Blog",
     }
   }
 
   return {
-    title: `${post.title} - ChatDevAI Blog`,
+    title: `${post.title} - AgentDevAI Blog`,
     description: `${post.title}. ${post.readTime} by ${post.author}. Learn about ${post.category.toLowerCase()} for AI agents and automation.`,
     keywords: [post.category, "AI agents", "automation", "LangChain", "WhatsApp"],
     authors: [{ name: post.author }],
@@ -362,7 +362,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ id: s
     },
     publisher: {
       "@type": "Organization",
-      name: "ChatDevAI",
+      name: "AgentDevAI",
       logo: {
         "@type": "ImageObject",
         url: "https://chatdevai.com/chatdevai-logo.png",

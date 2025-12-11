@@ -6,12 +6,12 @@ import { ServicesCTA } from "@/components/services/services-cta"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Services | ChatDevAI - WhatsApp AI Agent Development",
+  title: "Services | AgentDevAI - WhatsApp AI Agent Development",
   description:
-    "Professional WhatsApp automation, AI engineering, and GCP deployment services. Build production-grade AI systems with ChatDevAI's expert team.",
+    "Professional WhatsApp automation, AI engineering, and GCP deployment services. Build production-grade AI systems with AgentDevAI's expert team.",
   keywords: ["AI development services", "WhatsApp automation", "AI consulting", "GCP deployment", "enterprise AI"],
   openGraph: {
-    title: "Services | ChatDevAI - WhatsApp AI Agent Development",
+    title: "Services | AgentDevAI - WhatsApp AI Agent Development",
     description: "Professional AI agent development, WhatsApp automation, and enterprise deployment services.",
     type: "website",
     images: [
@@ -19,13 +19,13 @@ export const metadata: Metadata = {
         url: "/og-services.jpg",
         width: 1200,
         height: 630,
-        alt: "ChatDevAI Services",
+        alt: "AgentDevAI Services",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Services - ChatDevAI",
+    title: "Services - AgentDevAI",
     description: "Professional WhatsApp automation and AI agent development services.",
     images: ["/og-services.jpg"],
   },

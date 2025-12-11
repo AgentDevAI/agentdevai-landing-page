@@ -11,12 +11,12 @@ const DEMO_BENEFITS = [
   {
     icon: Users,
     title: "Expert Guidance",
-    description: "Our team will guide you through ChatDevAI's capabilities and architecture.",
+    description: "Our team will guide you through AgentDevAI's capabilities and architecture.",
   },
   {
     icon: CheckCircle2,
     title: "Custom Solution Overview",
-    description: "We'll outline how ChatDevAI can be tailored to your requirements.",
+    description: "We'll outline how AgentDevAI can be tailored to your requirements.",
   },
   {
     icon: Calendar,
@@ -31,7 +31,7 @@ export function DemoBenefits() {
       <div>
         <h3 className="text-2xl font-bold text-white mb-4">What to Expect</h3>
         <p className="text-slate-300 mb-6">
-          Our personalized demo is tailored to your business needs. You'll see exactly how ChatDevAI can solve your
+          Our personalized demo is tailored to your business needs. You'll see exactly how AgentDevAI can solve your
           challenges.
         </p>
       </div>

@@ -4,7 +4,7 @@ import { Star } from "lucide-react"
 const TESTIMONIALS = [
   {
     quote:
-      "ChatDevAI built us a WhatsApp booking system that increased our appointment bookings by 300%. The AI handles everything automatically.",
+      "AgentDevAI built us a WhatsApp booking system that increased our appointment bookings by 300%. The AI handles everything automatically.",
     author: "Sarah Martinez",
     role: "Owner, Bella Beauty Salon",
     rating: 5,

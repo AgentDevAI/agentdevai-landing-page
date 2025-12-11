@@ -9,7 +9,7 @@ const CASE_STUDIES = [
     challenge:
       "Manual customer support was consuming 30% of operational costs with slow response times affecting customer satisfaction.",
     solution:
-      "Deployed ChatDevAI agents integrated with WhatsApp and Messenger to handle common inquiries, orders, and returns automatically.",
+      "Deployed AgentDevAI agents integrated with WhatsApp and Messenger to handle common inquiries, orders, and returns automatically.",
     results: [
       "40% reduction in support costs",
       "Response time reduced from 2 hours to 2 minutes",
@@ -43,7 +43,7 @@ const CASE_STUDIES = [
     challenge:
       "Manual appointment scheduling was time-consuming and prone to errors, resulting in no-shows and double-bookings.",
     solution:
-      "Integrated ChatDevAI agents with WhatsApp and LinkedIn to manage appointments, send reminders, and handle reschedules automatically.",
+      "Integrated AgentDevAI agents with WhatsApp and LinkedIn to manage appointments, send reminders, and handle reschedules automatically.",
     results: [
       "No-show rate reduced from 12% to 3%",
       "80% automation of appointment handling",
@@ -94,7 +94,7 @@ const CASE_STUDIES = [
     challenge:
       "Customers had no way to check inventory, place orders, or get order updates without visiting stores or calling.",
     solution:
-      "Deployed ChatDevAI agents to manage inventory queries, process orders, and provide real-time tracking via WhatsApp and Messenger.",
+      "Deployed AgentDevAI agents to manage inventory queries, process orders, and provide real-time tracking via WhatsApp and Messenger.",
     results: [
       "Online orders increased by 120%",
       "In-store visits reduced 40% (better efficiency)",

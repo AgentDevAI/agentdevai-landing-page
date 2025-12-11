@@ -2,7 +2,7 @@ export function Testimonials() {
   const testimonials = [
     {
       quote:
-        "ChatDevAI transformed our customer service. We reduced response time by 80% and tripled our sales conversion with their WhatsApp bot.",
+        "AgentDevAI transformed our customer service. We reduced response time by 80% and tripled our sales conversion with their WhatsApp bot.",
       author: "Maria Santos",
       role: "E-commerce Director",
       company: "TechStore Brasil",
@@ -16,7 +16,7 @@ export function Testimonials() {
     },
     {
       quote:
-        "Our lead qualification improved dramatically. ChatDevAI's AI agents now handle 90% of initial outreach, saving us 200 hours monthly.",
+        "Our lead qualification improved dramatically. AgentDevAI's AI agents now handle 90% of initial outreach, saving us 200 hours monthly.",
       author: "Ana Silva",
       role: "Sales Manager",
       company: "Growth Marketing Co",
@@ -35,7 +35,7 @@ export function Testimonials() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Client Testimonials</h2>
-          <p className="text-xl text-slate-300">See how businesses are transforming with ChatDevAI.</p>
+          <p className="text-xl text-slate-300">See how businesses are transforming with AgentDevAI.</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">

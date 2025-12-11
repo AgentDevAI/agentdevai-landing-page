@@ -7,7 +7,7 @@ export function BlogHero() {
           Insights
         </h1>
         <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-          Learn about AI agents, business automation, and development best practices from the ChatDevAI team
+          Learn about AI agents, business automation, and development best practices from the AgentDevAI team
         </p>
       </div>
     </section>

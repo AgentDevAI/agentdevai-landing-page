@@ -14,7 +14,7 @@ export function AboutProfile() {
           <div className="space-y-8">
             <div className="prose prose-invert max-w-none">
               <p className="text-lg text-slate-300 leading-relaxed">
-                ChatDevAI was founded by experienced software engineers who saw businesses struggling with expensive,
+                AgentDevAI was founded by experienced software engineers who saw businesses struggling with expensive,
                 inflexible no-code solutions. We combine deep expertise in Python, FastAPI, LangChain, and cloud
                 infrastructure to deliver custom AI systems that actually solve real problems.
               </p>

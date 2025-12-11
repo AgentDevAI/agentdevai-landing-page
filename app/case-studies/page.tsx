@@ -6,13 +6,13 @@ import { CaseStudiesCTA } from "@/components/case-studies/case-studies-cta"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Case Studies - ChatDevAI Success Stories | Real Results",
+  title: "Case Studies - AgentDevAI Success Stories | Real Results",
   description:
-    "See how ChatDevAI helped businesses achieve 40% cost reduction, 50% faster onboarding, and increased revenue through AI automation. Read real customer success stories.",
+    "See how AgentDevAI helped businesses achieve 40% cost reduction, 50% faster onboarding, and increased revenue through AI automation. Read real customer success stories.",
   keywords: ["case studies", "AI success stories", "ROI", "automation results", "customer testimonials"],
   openGraph: {
-    title: "Case Studies - ChatDevAI Success Stories",
-    description: "Real results from businesses using ChatDevAI's AI agents and automation solutions.",
+    title: "Case Studies - AgentDevAI Success Stories",
+    description: "Real results from businesses using AgentDevAI's AI agents and automation solutions.",
     type: "website",
   },
 }

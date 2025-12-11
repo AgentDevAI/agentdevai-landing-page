@@ -13,7 +13,7 @@ export function BlogPostAuthor({ author }: BlogPostAuthorProps) {
           <div>
             <p className="text-white font-semibold text-lg mb-1">{author}</p>
             <p className="text-slate-400 text-sm">
-              AI Engineer and Content Writer at ChatDevAI. Passionate about building intelligent systems and sharing
+              AI Engineer and Content Writer at AgentDevAI. Passionate about building intelligent systems and sharing
               knowledge with the community.
             </p>
           </div>

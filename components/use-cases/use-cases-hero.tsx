@@ -8,7 +8,7 @@ export function UseCasesHero() {
         </h1>
         <p className="text-xl text-slate-400 max-w-3xl mx-auto">
           Discover how businesses across industries are automating operations, increasing revenue, and improving
-          customer experience with ChatDevAI's intelligent WhatsApp agents.
+          customer experience with AgentDevAI's intelligent WhatsApp agents.
         </p>
       </div>
     </section>

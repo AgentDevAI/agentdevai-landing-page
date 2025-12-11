@@ -4,7 +4,7 @@ export function CaseStudiesCTA() {
       <div className="max-w-2xl mx-auto text-center">
         <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
         <p className="text-slate-300 mb-8">
-          Schedule a personalized demo to see how ChatDevAI can deliver similar results for your organization.
+          Schedule a personalized demo to see how AgentDevAI can deliver similar results for your organization.
         </p>
         <a
           href="/schedule-demo"

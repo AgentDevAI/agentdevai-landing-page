@@ -27,7 +27,7 @@ export function HowItWorks() {
     <section className="py-20 px-4 md:px-8 bg-slate-950 border-t border-slate-800">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">How ChatDevAI Works</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">How AgentDevAI Works</h2>
           <p className="text-xl text-slate-300">From strategy to deployment in 4 simple steps.</p>
         </div>
 
