@@ -6,7 +6,7 @@ export function ServiceSchema() {
     provider: {
       "@type": "Organization",
       name: "AgentDevAI",
-      url: "https://chatdevai.com",
+      url: "https://agentdevai.com",
     },
     description:
       "Professional AI agent development services including WhatsApp automation, multi-channel integration, and custom AI solutions using LangChain, LangGraph, and FastAPI.",
