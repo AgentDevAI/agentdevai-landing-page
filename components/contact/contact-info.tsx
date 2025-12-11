@@ -32,7 +32,7 @@ export function ContactInfo() {
               variant="outline"
               className="border-primary text-primary hover:bg-primary/10 bg-transparent"
             >
-              <Link href="mailto:hello@chatdevai.com">Email Us</Link>
+              <Link href="mailto:contact@agentdevai.com">Email Us</Link>
             </Button>
           </Card>
 

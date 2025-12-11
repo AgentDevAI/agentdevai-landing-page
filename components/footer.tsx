@@ -74,8 +74,8 @@ export function Footer() {
             <h4 className="text-white font-semibold mb-4">Contact</h4>
             <ul className="space-y-2 text-slate-400 text-sm">
               <li>
-                <a href="mailto:hello@chatdevai.com" className="hover:text-blue-400 transition">
-                  hello@chatdevai.com
+                <a href="mailto:contact@agentdevai.com" className="hover:text-blue-400 transition">
+                  contact@agentdevai.com
                 </a>
               </li>
               <li>
