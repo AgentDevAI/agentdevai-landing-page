@@ -1,7 +1,7 @@
 import { Navbar } from "@/components/navbar"
 import { Hero } from "@/components/home/hero"
 import { LiveDemos } from "@/components/home/live-demos"
-import { WhyAgentDevAI } from "@/components/home/why-chatdevai"
+import { WhyAgentDevAI } from "@/components/home/why-agentdevai"
 import { ProcessSection } from "@/components/home/process-section"
 import { TechStack } from "@/components/home/tech-stack"
 import { TestimonialsSection } from "@/components/home/testimonials-section"

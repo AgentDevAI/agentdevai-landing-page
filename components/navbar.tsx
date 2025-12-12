@@ -16,7 +16,7 @@ export function Navbar() {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
-            <Image src="/chatdevai-logo.png" alt="AgentDevAI" width={40} height={40} className="w-10 h-10" />
+            <Image src="/agentdevai-logo.png" alt="AgentDevAI" width={40} height={40} className="w-10 h-10" />
             <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
               AgentDevAI
             </span>
