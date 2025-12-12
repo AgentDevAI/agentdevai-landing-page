@@ -4,9 +4,9 @@ export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
       userAgent: "*",
-      allow: "/",
-      disallow: "/api/",
+      // allow: "/",
+      disallow: "/",
     },
-    sitemap: "https://agentdevai.com/sitemap.xml",
+    // sitemap: "https://agentdevai.com/sitemap.xml",
   }
 }
