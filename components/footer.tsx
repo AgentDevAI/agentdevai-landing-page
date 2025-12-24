@@ -89,7 +89,7 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <span className="text-slate-500">Working Remotely</span>
+                <span className="text-slate-400">Working Remotely</span>
               </li>
             </ul>
           </div>
