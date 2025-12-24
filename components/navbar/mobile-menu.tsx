@@ -21,7 +21,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   if (!isOpen) return null
 
   return (
-    <div className="md:hidden pb-4 space-y-2 border-t border-slate-800 mt-2">
+    <div id="mobile-navigation" className="md:hidden pb-4 space-y-2 border-t border-slate-800 mt-2">
       {NAV_LINKS.map((link) => (
         <MobileNavLink key={link.href} {...link} onClick={onClose} />
       ))}
