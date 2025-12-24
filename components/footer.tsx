@@ -12,7 +12,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Quick Links</h4>
+            <h3 className="text-white font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-slate-400 text-sm">
               <li>
                 <Link href="/" className="hover:text-blue-400 transition">
@@ -44,7 +44,7 @@ export function Footer() {
 
           {/* Resources */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Resources</h4>
+            <h3 className="text-white font-semibold mb-4">Resources</h3>
             <ul className="space-y-2 text-slate-400 text-sm">
               <li>
                 <Link href="/blog" className="hover:text-blue-400 transition">
@@ -71,7 +71,7 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Contact</h4>
+            <h3 className="text-white font-semibold mb-4">Contact</h3>
             <ul className="space-y-2 text-slate-400 text-sm">
               <li>
                 <a href="mailto:contact@agentdevai.com" className="hover:text-blue-400 transition">
