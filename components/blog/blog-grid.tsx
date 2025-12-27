@@ -102,7 +102,8 @@ import { client } from "@/sanity/client";
 
 const POSTS_QUERY = `*[
   _type == "post"
-]|order(publishedAt desc)[0...12]{_id, id, title, excerpt, category, date, readTime, image}`;
+  && defined(slug.current)
+]|order(publishedAt desc)[0...12]{_id, slug, title, excerpt, category, date, readTime, image}`;
 const options = { next: { revalidate: 30 } };
 
 
@@ -121,7 +122,7 @@ export async function BlogGrid({ currentPage = 1 }: { currentPage?: number }) {
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {paginatedPosts.map((post) => (
-            <Link key={post.id} href={`/blog/${post.id}`}>
+            <Link key={post._id} href={`/blog/${post.slug.current}`}>
               <Card className="group h-full overflow-hidden bg-slate-900 border-slate-800 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-1 cursor-pointer">
                 {/* Image */}
                 <div className="relative h-48 bg-gradient-to-br from-primary/20 to-accent/20 overflow-hidden">
