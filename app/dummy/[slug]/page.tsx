@@ -11,7 +11,7 @@ const urlFor = (source: SanityImageSource) =>
     ? imageUrlBuilder({ projectId, dataset }).image(source)
     : null;
 
-const options = { next: { revalidate: 30 } };
+const options = { next: { revalidate: 3600 } }; // Revalidate every hour
 
 export default async function PostPage({
   params,

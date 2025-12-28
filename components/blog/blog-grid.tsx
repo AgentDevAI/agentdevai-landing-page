@@ -101,10 +101,20 @@ import { client } from "@/sanity/client";
 //   },
 // ]
 
+// Optimized query - explicitly select only needed fields and use proper date field
 const POSTS_QUERY = `*[
   _type == "post"
   && defined(slug.current)
-]|order(publishedAt desc)[0...12]{_id, slug, title, excerpt, category, date, readTime, image}`;
+]|order(date desc)[0...50]{
+  _id,
+  "slug": slug.current,
+  title,
+  excerpt,
+  category,
+  date,
+  readTime,
+  image
+}`;
 
 const { projectId, dataset } = client.config();
 const urlFor = (source: SanityImageSource) =>
@@ -113,7 +123,7 @@ const urlFor = (source: SanityImageSource) =>
     : null;
 
 
-const options = { next: { revalidate: 30 } };
+const options = { next: { revalidate: 3600 } }; // Revalidate every hour instead of 30 seconds
 
 
 const POSTS_PER_PAGE = 6
@@ -131,7 +141,7 @@ export async function BlogGrid({ currentPage = 1 }: { currentPage?: number }) {
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {paginatedPosts.map((post) => (
-            <Link key={post._id} href={`/blog/${post.slug.current}`}>
+            <Link key={post._id} href={`/blog/${post.slug}`}>
               <Card className="group h-full overflow-hidden bg-slate-900 border-slate-800 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-1 cursor-pointer">
                 {/* Image */}
                 <div className="relative h-48 bg-gradient-to-br from-primary/20 to-accent/20 overflow-hidden">

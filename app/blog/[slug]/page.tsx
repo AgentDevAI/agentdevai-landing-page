@@ -282,28 +282,90 @@ import { client } from "@/sanity/client";
 //   },
 // ]
 
-const POST_QUERY = `*[_type == "post" && slug.current == $slug][0]`;
-const RELATED_POSTS_QUERY = `*[_type == "post" && slug.current != $slug][0...3]{ _id, title, "slug": slug.current, category, date, "image": image.asset->url }`;
+// Optimized queries - only fetch fields we actually use
+const POST_QUERY = `*[_type == "post" && slug.current == $slug][0]{
+  _id,
+  title,
+  "slug": slug.current,
+  category,
+  date,
+  readTime,
+  author,
+  image,
+  content,
+  excerpt
+}`;
+
+const RELATED_POSTS_QUERY = `*[_type == "post" && slug.current != $slug][0...3]{
+  _id,
+  title,
+  "slug": slug.current,
+  category,
+  date,
+  image
+}`;
 
 const { projectId, dataset } = client.config();
 const urlFor = (source: SanityImageSource) =>
   projectId && dataset
     ? createImageUrlBuilder({ projectId, dataset }).image(source)
     : null;
-const options = { next: { revalidate: 30 } };
+const options = { next: { revalidate: 3600 } }; // Revalidate every hour instead of 30 seconds
+
+// Cache for post data to avoid duplicate fetches
+const postCache = new Map<string, { data: SanityDocument; timestamp: number }>();
+const CACHE_TTL = 60000; // 1 minute cache for same request
+
+async function getPost(slug: string): Promise<SanityDocument> {
+  const cached = postCache.get(slug);
+  const now = Date.now();
+  
+  if (cached && (now - cached.timestamp) < CACHE_TTL) {
+    return cached.data;
+  }
+  
+  const post = await client.fetch<SanityDocument>(POST_QUERY, { slug }, options);
+  postCache.set(slug, { data: post, timestamp: now });
+  
+  // Clean old cache entries
+  if (postCache.size > 100) {
+    const entries = Array.from(postCache.entries());
+    entries.sort((a, b) => a[1].timestamp - b[1].timestamp);
+    for (let i = 0; i < 50; i++) {
+      postCache.delete(entries[i][0]);
+    }
+  }
+  
+  return post;
+}
+
+// Generate static params for all blog posts at build time
+export async function generateStaticParams() {
+  const posts = await client.fetch<Array<{ slug: string }>>(
+    `*[_type == "post" && defined(slug.current)][0...50]{ "slug": slug.current }`,
+    {},
+    { next: { revalidate: 3600 } }
+  );
+  
+  return posts.map((post) => ({
+    slug: post.slug,
+  }));
+}
 
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const post = await client.fetch<SanityDocument>(POST_QUERY, await params, options);
-  const postImageUrl = post.image
-    ? urlFor(post.image)?.width(550).height(310).url()
-    : "/placeholder.svg";
+  const { slug } = await params;
+  const post = await getPost(slug);
 
   if (!post) {
     return {
       title: "Post Not Found - AgentDevAI Blog",
     }
   }
+
+  const postImageUrl = post.image
+    ? urlFor(post.image)?.width(550).height(310).url()
+    : "/placeholder.svg";
 
   return {
     title: `${post.title} - AgentDevAI Blog`,
@@ -335,17 +397,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 }
 
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
-  const resolvedParams = await params;
-  const post = await client.fetch<SanityDocument>(POST_QUERY, resolvedParams, options);
-  const postImageUrl = post.image
-    ? urlFor(post.image)?.width(550).height(310).url()
-    : "/placeholder.svg";
-
-  if (!post) {
-    return {
-      title: "Post Not Found - AgentDevAI Blog",
-    }
-  }
+  const { slug } = await params;
+  const post = await getPost(slug);
 
   if (!post) {
     return (
@@ -364,13 +417,17 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     )
   }
 
-  const relatedPostsData = await client.fetch<SanityDocument[]>(RELATED_POSTS_QUERY, resolvedParams, options);
+  const postImageUrl = post.image
+    ? urlFor(post.image)?.width(550).height(310).url()
+    : "/placeholder.svg";
+
+  const relatedPostsData = await client.fetch<SanityDocument[]>(RELATED_POSTS_QUERY, { slug }, options);
   const relatedPosts = relatedPostsData.map(({ slug, title, category, date, image }) => ({
     id: slug,
     title,
     category,
     date,
-    image,
+    image: image ? urlFor(image)?.width(550).height(310).url() || "/placeholder.svg" : "/placeholder.svg",
   }))
 
   const articleSchema = {
