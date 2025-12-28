@@ -283,7 +283,7 @@ import { client } from "@/sanity/client";
 // ]
 
 const POST_QUERY = `*[_type == "post" && slug.current == $slug][0]`;
-const RELATED_POSTS_QUERY = `*[_type == "post" && slug.current != $slug][0...3]{ _id, title, "slug": slug.current, category, date, "image": mainImage.asset->url }`;
+const RELATED_POSTS_QUERY = `*[_type == "post" && slug.current != $slug][0...3]{ _id, title, "slug": slug.current, category, date, "image": image.asset->url }`;
 
 const { projectId, dataset } = client.config();
 const urlFor = (source: SanityImageSource) =>

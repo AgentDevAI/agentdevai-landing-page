@@ -16,7 +16,7 @@ export function BlogPostHeader({ title, image, category, author, date, readTime 
     <>
       {/* Hero Image */}
       <section className="relative h-96 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 overflow-hidden">
-        <Image src={image || "/placeholder.svg"} alt={title} fill className="object-cover" priority />
+        <Image src={image || "/placeholder.svg"} alt={title} fill sizes="100vw" className="object-cover" priority />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 to-transparent" />
       </section>
 
