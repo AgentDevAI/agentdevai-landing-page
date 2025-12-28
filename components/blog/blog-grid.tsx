@@ -5,6 +5,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { BlogPagination } from "./blog-pagination"
 import { type SanityDocument } from "next-sanity";
+import { createImageUrlBuilder, type SanityImageSource } from "@sanity/image-url";
 import { client } from "@/sanity/client";
 
 // const BLOG_POSTS = [
@@ -104,6 +105,14 @@ const POSTS_QUERY = `*[
   _type == "post"
   && defined(slug.current)
 ]|order(publishedAt desc)[0...12]{_id, slug, title, excerpt, category, date, readTime, image}`;
+
+const { projectId, dataset } = client.config();
+const urlFor = (source: SanityImageSource) =>
+  projectId && dataset
+    ? createImageUrlBuilder({ projectId, dataset }).image(source)
+    : null;
+
+
 const options = { next: { revalidate: 30 } };
 
 
@@ -127,7 +136,9 @@ export async function BlogGrid({ currentPage = 1 }: { currentPage?: number }) {
                 {/* Image */}
                 <div className="relative h-48 bg-gradient-to-br from-primary/20 to-accent/20 overflow-hidden">
                   <Image
-                    src={post.image || "/placeholder.svg"}
+                    src={post.image
+    ? urlFor(post.image)?.width(550).height(310).url() || "/placeholder.svg"
+    : "/placeholder.svg"}
                     alt={post.title}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

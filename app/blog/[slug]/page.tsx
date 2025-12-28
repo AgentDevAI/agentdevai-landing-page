@@ -295,6 +295,9 @@ const options = { next: { revalidate: 30 } };
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const post = await client.fetch<SanityDocument>(POST_QUERY, await params, options);
+  const postImageUrl = post.image
+    ? urlFor(post.image)?.width(550).height(310).url()
+    : "/placeholder.svg";
 
   if (!post) {
     return {
@@ -315,7 +318,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       authors: [post.author],
       images: [
         {
-          url: post.image,
+          url: postImageUrl ? postImageUrl : "/placeholder.svg",
           width: 1200,
           height: 630,
           alt: post.title,
@@ -326,7 +329,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       card: "summary_large_image",
       title: post.title,
       description: `${post.readTime} by ${post.author}`,
-      images: [post.image],
+      images: [postImageUrl ? postImageUrl : "/placeholder.svg"],
     },
   }
 }
@@ -334,6 +337,15 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
   const resolvedParams = await params;
   const post = await client.fetch<SanityDocument>(POST_QUERY, resolvedParams, options);
+  const postImageUrl = post.image
+    ? urlFor(post.image)?.width(550).height(310).url()
+    : "/placeholder.svg";
+
+  if (!post) {
+    return {
+      title: "Post Not Found - AgentDevAI Blog",
+    }
+  }
 
   if (!post) {
     return (
@@ -365,7 +377,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: post.title,
-    image: `https://agentdevai.com${post.image}`,
+    image: postImageUrl ? postImageUrl : "/placeholder.svg",
     datePublished: new Date(post.date).toISOString(),
     author: {
       "@type": "Person",
@@ -391,7 +403,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       <main className="pt-20">
         <BlogPostHeader
           title={post.title}
-          image={post.image}
+          image={postImageUrl ? postImageUrl : "/placeholder.svg"}
           category={post.category}
           author={post.author}
           date={post.date}
